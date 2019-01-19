@@ -87,41 +87,38 @@ class _MyAppState extends State<MyApp> {
           Text("data"),
           Text("data"),
           Container(
-            height: 80.0,
+            height: 100.0,
             child: ListView(
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
               children: [
-                Material(
-                    color: Colors.red,
+                ClipRRect(
                     borderRadius: BorderRadius.circular(30.0),
-                    child: MaterialButton(
-                      onPressed: () {},
-                      minWidth: 200.0,
-                      child: Text('Coba'),
+                    child: FadeInImage.assetNetwork(
+                      placeholder: "img/loading.gif",
+                      image:
+                          "http://www.aljanh.net/data/archive/img/2231164042.jpeg",
                     )),
                 SizedBox(
                   width: 10.0,
                 ),
-                Material(
-                    color: Colors.red,
+                ClipRRect(
                     borderRadius: BorderRadius.circular(30.0),
-                    child: MaterialButton(
-                      onPressed: () {},
-                      minWidth: 200.0,
-                      child: Text('Coba'),
+                    child: FadeInImage.assetNetwork(
+                      placeholder: "img/loading.gif",
+                      image:
+                          "http://www.aljanh.net/data/archive/img/2231164042.jpeg",
                     )),
                 SizedBox(
                   width: 10.0,
                 ),
-                Material(
-                    color: Colors.red,
+                ClipRRect(
                     borderRadius: BorderRadius.circular(30.0),
-                    child: MaterialButton(
-                      onPressed: () {},
-                      minWidth: 200.0,
-                      child: Text('Coba'),
-                    ))
+                    child: FadeInImage.assetNetwork(
+                      placeholder: "img/loading.gif",
+                      image:
+                          "http://www.aljanh.net/data/archive/img/2231164042.jpeg",
+                    )),
               ],
             ),
           ),
