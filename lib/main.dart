@@ -57,87 +57,27 @@ class _MyAppState extends State<MyApp> {
             shrinkWrap: true,
             crossAxisCount: 3,
             children: <Widget>[
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
+              CardButton(
+                icon: Icons.home,
+                text: "Home",
+                onTap: () {
+                  print("Home");
+                },
               ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.music_note),
-                    Text('Music')
-                  ],
-                ),
+              CardButton(
+                icon: Icons.account_circle,
+                text: "Profile",
+                onTap: () {
+                  print("Profile");
+                },
               ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.radio),
-                    Text('Radio')
-                  ],
-                ),
+              CardButton(
+                icon: Icons.settings,
+                text: "Setting",
+                onTap: () {
+                  print("Profile");
+                },
               ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
-              ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
-              ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
-              ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
-              ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
-              ),
-              Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.home),
-                    Text('Home')
-                  ],
-                ),
-              )
             ],
           ),
           Text("data"),
@@ -184,6 +124,28 @@ class _MyAppState extends State<MyApp> {
           Text("data"),
           Text("data"),
         ],
+      ),
+    );
+  }
+}
+
+class CardButton extends StatelessWidget {
+  final String text;
+  final IconData icon;
+  final VoidCallback onTap;
+  CardButton({this.text, this.icon, this.onTap});
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(icon),
+            Text(text),
+          ],
+        ),
       ),
     );
   }
