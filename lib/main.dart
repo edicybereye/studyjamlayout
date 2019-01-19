@@ -54,6 +54,7 @@ class _MyAppState extends State<MyApp> {
             image: "http://www.aljanh.net/data/archive/img/2231164042.jpeg",
           ),
           GridView.count(
+            physics: ClampingScrollPhysics(),
             shrinkWrap: true,
             crossAxisCount: 3,
             children: <Widget>[
@@ -86,35 +87,41 @@ class _MyAppState extends State<MyApp> {
           Text("data"),
           Text("data"),
           Container(
-            height: 150.0,
+            height: 80.0,
             child: ListView(
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
               children: [
-                Icon(
-                  Icons.home,
-                  size: 100.0,
+                Material(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: MaterialButton(
+                      onPressed: () {},
+                      minWidth: 200.0,
+                      child: Text('Coba'),
+                    )),
+                SizedBox(
+                  width: 10.0,
                 ),
-                Icon(
-                  Icons.home,
-                  size: 100.0,
+                Material(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: MaterialButton(
+                      onPressed: () {},
+                      minWidth: 200.0,
+                      child: Text('Coba'),
+                    )),
+                SizedBox(
+                  width: 10.0,
                 ),
-                Icon(
-                  Icons.home,
-                  size: 100.0,
-                ),
-                Icon(
-                  Icons.home,
-                  size: 100.0,
-                ),
-                Icon(
-                  Icons.home,
-                  size: 100.0,
-                ),
-                Icon(
-                  Icons.home,
-                  size: 100.0,
-                ),
+                Material(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: MaterialButton(
+                      onPressed: () {},
+                      minWidth: 200.0,
+                      child: Text('Coba'),
+                    ))
               ],
             ),
           ),
